@@ -1,5 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
 
 // create div with id "target-for-ext" and place it fixed on the page
 const div = document.createElement("div");
@@ -15,17 +13,3 @@ div.innerHTML = `
     </div>
 `
 document.body.appendChild(div);
-
-// const addText = () => {
-//     console.log("Clicked");
-//   const inputs = document.getElementsByTagName("input");
-//   console.log(inputs);
-//   inputs.map((input) =>
-//     input.addEventListener("focus", () => (input.value = "Hello World"))
-//   );
-// };
-
-// const reactRoot = document.getElementById("target-for-ext");
-// ReactDOM.render(<div>Hello World</div>, reactRoot);
-
-// addText();
