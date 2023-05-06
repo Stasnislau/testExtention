@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  entry:  "./src/popup.jsx",
+  entry: "./src/popup.jsx",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "content.js",
@@ -19,6 +19,17 @@ module.exports = {
             presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 10000,
+            },
+          },
+        ],
       },
     ],
   },

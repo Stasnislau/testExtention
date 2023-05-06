@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import Banner from "./components/banner.jsx";
+import InputModifier from "./components/inputModifier.jsx";
 
 const isPopUp = !!document.getElementById("root-for-popup");
 
@@ -20,18 +21,19 @@ function Popup() {
 
 function Embedded() {
   console.log("embedded");
-  return (
-    <div>
-      <h1>Text for embedded</h1>
-      <Banner />
-    </div>
-  );
+  return <InputModifier />;
 }
 
 if (isPopUp) {
   const root = document.getElementById("root-for-popup");
   render(<Popup />, root);
 } else {
-  const inPageRoot = document.getElementById("in-page-root");
-  render(<Embedded />, inPageRoot);
+  const target = document.querySelector(".message-input-wrapper");
+  console.log(target);
+  if (!target) {
+    console.log("target not found");
+  } else {
+    const realTarget = target.appendChild(document.createElement("div"));
+    render(<Embedded />, realTarget);
+  }
 }

@@ -1,14 +1,15 @@
 import { Box, Paper, TextField, Typography } from "@mui/material";
 import React from "react";
 
+
 const Banner = () => {
   const styles = {
     banner: {
-      position: "fixed",
+      position: "absolute",
       bottom: 0,
       left: 0,
-      width: "100%",
-      zIndex: 1000,
+      width: "30",
+      zIndex: 1,
       backgroundColor: "white",
       padding: "10px",
       boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",

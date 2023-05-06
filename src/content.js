@@ -1,8 +1,9 @@
 
-// create div with id "target-for-ext" and place it fixed on the page
-const div = document.createElement("div");
+
+
+const div = target.createElement("div");
 div.id = "target-for-ext";
-div.style.position = "fixed";
+div.style.position = "absolute";
 div.style.top = "0";
 div.style.right = "0";
 div.style.zIndex = 99999
